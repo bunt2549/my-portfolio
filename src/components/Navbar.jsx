@@ -21,15 +21,25 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleClick = (id, title) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; // Adjust this value to account for the navbar height
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
+      setActive(title);
+      setToggle(false);
+    }
+  };
 
   return (
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-5 fixed top-0 z-[100] ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -38,8 +48,8 @@ const Navbar = () => {
           to='/'
           className='flex items-center gap-2'
           onClick={() => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
             setActive("");
-            window.scrollTo(0, 0);
           }}
         >
           <img src={logo} alt='logo' className='rounded-full w-9 h-9 object-contain' />
@@ -56,9 +66,9 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleClick(nav.id, nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <span>{nav.title}</span>
             </li>
           ))}
         </ul>
@@ -67,14 +77,13 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
-
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-[90] rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -83,12 +92,9 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  onClick={() => handleClick(nav.id, nav.title)}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <span>{nav.title}</span>
                 </li>
               ))}
             </ul>

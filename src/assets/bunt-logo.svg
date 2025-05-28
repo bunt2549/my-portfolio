@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { 
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 48px;
+      fill: #c8b7ed;
+    }
+    .logo-circle {
+      fill: #1d1836;
+      stroke: #c8b7ed;
+      stroke-width: 3;
+    }
+  </style>
+  <circle class="logo-circle" cx="50" cy="50" r="45"/>
+  <text class="logo-text" x="50" y="65" text-anchor="middle">B</text>
+</svg>

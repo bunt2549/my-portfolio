@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { activities } from "../constants"; // Changed from projects to activities
+import { activities } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ActivityCard = ({
@@ -69,7 +69,7 @@ const ActivityCard = ({
 
 const Activities = () => {
   return (
-    <>
+    <section id='activities' className='relative min-h-screen'>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My Activities</p>
         <h2 className={`${styles.sectionHeadText}`}>Activities.</h2>
@@ -91,8 +91,8 @@ const Activities = () => {
           <ActivityCard key={`activity-${index}`} index={index} {...activity} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
-export default SectionWrapper(Activities, "activities");
+export default SectionWrapper(Activities, "");

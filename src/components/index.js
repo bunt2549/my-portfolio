@@ -4,18 +4,17 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
-import Works from "./Works";
+import Activities from "./Activities";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-
+import ParticlesComponent from "./ParticlesComponent";
 
 export {
   Hero,
   Navbar,
   About,
   Tech,
-  Experience,
-  Works,
+  Experience,  Activities,
   Contact,
   CanvasLoader,
   EarthCanvas, 
@@ -23,4 +22,5 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   HeroBG,
+  ParticlesComponent,
 };
