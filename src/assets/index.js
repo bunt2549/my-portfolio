@@ -39,6 +39,8 @@ import dga from "./company/dga.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import menuactivity from "./menuactivity.jpg";
+import activity2 from "./activity2.jpg";
 
 export {
   gmail,
@@ -78,4 +80,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  menuactivity,
+  activity2
 };

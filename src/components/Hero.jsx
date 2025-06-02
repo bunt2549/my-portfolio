@@ -22,9 +22,7 @@ const Hero = () => {
             Hi! I'm <span className='text-[#915EFF]'>Bunt</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a <span className='text-[#c8b7ed]'>Computer Science</span> &{" "}
-            <span className='text-[#c8b7ed]'>Economics</span> <br className='sm:block hidden' /> student
-            at University of Toronto
+            Etobicoke collegiate institute
           </p>
         </div>
       </div>      <div className="absolute inset-0 z-[15]">

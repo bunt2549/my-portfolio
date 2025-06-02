@@ -29,6 +29,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    activity2,
+    menuactivity,
   } from "../assets";
 
 export const navLinks = [
@@ -197,16 +199,16 @@ const activities = [  // Changed from 'projects' to 'activities'
     description:
       "Designed some webpages for fun using HTML, design a visual template and menu used by the restaurant Sala House Coffee Bar and Bistro using Canva which had strengthen visual art and designing skills.",
     tags: [],  // Removed tags
-    image: carrent,  // You might want to update this to a relevant image
-    source_code_link: "https://github.com/",  // Update this if you have a relevant link
+    image: menuactivity,  // You might want to update this to a relevant image
+    source_code_link: "https://www.canva.com/design/DAGofe-oZHk/KxyI4z68IAmZ-_148sinsQ/watch?utm_content=DAGofe-oZHk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hda080b9486/",  // Update this if you have a relevant link
   },
   {
     name: "Buddhist Lesson Book",
     description:
       "Contributed in designing animation and translating a Buddhist lesson book, \u201CThe Practice of the 4 Foundations of Mindfulness at Burapha University at Wat Phutthasat\u201D from Thai to English. This experience has demonstrated my proficiency in English as I\u2019ve spent several years outside Thailand as international student.",
     tags: [],  // Removed tags
-    image: carrent,  // You might want to update this to a relevant image
-    source_code_link: "https://github.com/",  // Update this if you have a relevant link
+    image: activity2,  // You might want to update this to a relevant image
+
   },
 
 ];
